@@ -12,7 +12,8 @@ const Input = () => {
         console.log('adding plane');
         dispatch(savePlane({
             item: input,
-            done: false
+            done: false,
+            id: Date.now()
         }));
     };
 

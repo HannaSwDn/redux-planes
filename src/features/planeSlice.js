@@ -9,7 +9,7 @@ const planeSlice = createSlice({
     initialState,
     reducers: {
         savePlane: (state, action) => {
-            state.planeList.push(action.payload);
+            state.planes.push(action.payload);
         }
     }
 });
