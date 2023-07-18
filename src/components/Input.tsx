@@ -9,7 +9,6 @@ const Input = () => {
     const dispatch = useDispatch();
 
     const addPlane = () => {
-        console.log('adding plane');
         dispatch(savePlane({
             item: input,
             done: false,

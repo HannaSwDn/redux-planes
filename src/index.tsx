@@ -4,17 +4,29 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import styled from 'styled-components';
 
 const container = document.getElementById('root');
-const root = createRoot(container);
+// Are we sure that the value is never null here?
+// Since we are using a non-null assertion
+const root = createRoot(container!);
+
+const Wrapper = styled.div`
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+`;
 
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
+        <Wrapper>
+            <App />
+        </Wrapper>
+        </Provider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
